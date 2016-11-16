@@ -1,0 +1,9 @@
+Testing terminology
+
+After compiling and running the program, it has resulted in a failure as it has failed one of its functional requirements. 
+As a failure has been detected, a defect has been raised.
+The bug which causes the failure is found in the roundHalfDown method. It results in numbers ending with .5 to be rounded incorrectly.
+This bug is evidence of a fault in the roundHalfDown method.
+The fault is that a parameter given to the setDecimalsPrecision method is incorrect.
+The error is a result of the programmer having used BigDecimal.ROUND_HALF_UP as a parameter for setDecimalsPrecision(); whereas BigDecimal.ROUND_HALF_DOWN
+should have been used instead.
