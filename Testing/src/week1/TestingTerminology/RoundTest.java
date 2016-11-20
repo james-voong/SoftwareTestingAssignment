@@ -10,6 +10,7 @@ public class RoundTest {
 	public void RoundingPositiveDoubleDown() {
 		double x = 50.49;
 		double y = Round.roundHalfDown(x);
+		System.out.println("y= " + y);
 		assertTrue(y == 50);
 	}
 
@@ -17,6 +18,7 @@ public class RoundTest {
 	public void RoundingPositiveDoubleUp() {
 		double x = 50.6;
 		double y = Round.roundHalfDown(x);
+		System.out.println("y= " + y);
 		assertTrue(y == 51);
 	}
 
@@ -24,6 +26,7 @@ public class RoundTest {
 	public void RoundingPositiveDoubleUpFromMidpoint() {
 		double x = 50.5;
 		double y = Round.roundHalfDown(x);
+		System.out.println("y= " + y);
 		assertTrue(y == 50);
 	}
 
@@ -31,6 +34,7 @@ public class RoundTest {
 	public void RoundingNegativeDoubleDown() {
 		double x = -50.4;
 		double y = Round.roundHalfDown(x);
+		System.out.println("y= " + y);
 		assertTrue(y == -50);
 	}
 
@@ -38,6 +42,7 @@ public class RoundTest {
 	public void RoundingNegativeDoubleUp() {
 		double x = -50.6;
 		double y = Round.roundHalfDown(x);
+		System.out.println("y= " + y);
 		assertTrue(y == -51);
 	}
 
