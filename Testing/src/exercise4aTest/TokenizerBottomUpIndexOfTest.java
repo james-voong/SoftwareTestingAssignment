@@ -1,11 +1,11 @@
-package exercise4.BottomUpTest;
+package exercise4aTest;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import exercise4.BottomUp.TokenizerBottomUp;
+import exercise4a.TokenizerBottomUp;
 
 public class TokenizerBottomUpIndexOfTest {
 

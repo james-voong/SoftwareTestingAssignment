@@ -1,4 +1,4 @@
-package exercise4.BottomUp;
+package exercise4a;
 
 import java.util.ArrayList;
 

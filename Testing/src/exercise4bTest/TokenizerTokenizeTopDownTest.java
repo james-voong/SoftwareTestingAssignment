@@ -1,4 +1,4 @@
-package exercise4.BottomUpTest;
+package exercise4bTest;
 
 import static org.junit.Assert.*;
 
@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import org.junit.Before;
 import org.junit.Test;
 
-import exercise4.BottomUp.TokenizerBottomUp;
+import exercise4b.TokenizerTopDown;
 
-public class TokenizerBottomUpTokenizeTest {
+public class TokenizerTokenizeTopDownTest {
 
 	String phrase;
 
@@ -19,14 +19,13 @@ public class TokenizerBottomUpTokenizeTest {
 	}
 
 	/**
-	 * indexOf was tested earlier so will not be repeating the tests, have
-	 * replaced the indexOf method with my debugged version
+	 * indexOf is the built in java method
 	 */
 
 	/** Give a null phrase and assert that the returned ArrayList is empty */
 	@Test
 	public void NullInputGiven() {
-		ArrayList<String> myArray = TokenizerBottomUp.tokenize(null, 'a');
+		ArrayList<String> myArray = TokenizerTopDown.tokenize(null, 'a');
 		assertTrue(myArray == null);
 	}
 
@@ -35,15 +34,15 @@ public class TokenizerBottomUpTokenizeTest {
 	 */
 	@Test
 	public void EmptyStringGiven() {
-		ArrayList<String> myArray = TokenizerBottomUp.tokenize("", 'a');
+		ArrayList<String> myArray = TokenizerTopDown.tokenize("", 'a');
 		assertTrue(myArray.size() == 1);
 		assertTrue(myArray.get(0).equals(""));
 	}
 
-	/** Test to see if it can handle two words */
+	/** Test to see if it can two words */
 	@Test
 	public void TokenizeOnTwoWords() {
-		ArrayList<String> myArray = TokenizerBottomUp.tokenize(phrase, ',');
+		ArrayList<String> myArray = TokenizerTopDown.tokenize(phrase, ',');
 		// System.out.println(myArray);
 		assertTrue(myArray.size() == 2);
 		assertTrue(myArray.get(0).equals("Hello"));
@@ -56,7 +55,7 @@ public class TokenizerBottomUpTokenizeTest {
 	@Test
 	public void TokenizeOnMoreThanTwoWords() {
 		String myString = "Hello,there,world";
-		ArrayList<String> myArray = TokenizerBottomUp.tokenize(myString, ',');
+		ArrayList<String> myArray = TokenizerTopDown.tokenize(myString, ',');
 		// System.out.println(myArray);
 		assertTrue(myArray.size() == 3);
 		assertTrue(myArray.get(0).equals("Hello"));
@@ -68,7 +67,7 @@ public class TokenizerBottomUpTokenizeTest {
 	/** Only one word in the arrayList */
 	@Test
 	public void TokenizeOnOneWord() {
-		ArrayList<String> myArray = TokenizerBottomUp.tokenize("Hello", ',');
+		ArrayList<String> myArray = TokenizerTopDown.tokenize("Hello", ',');
 		// System.out.println(myArray);
 		assertTrue(myArray.size() == 1);
 		assertTrue(myArray.get(0).equals("Hello"));
@@ -78,16 +77,15 @@ public class TokenizerBottomUpTokenizeTest {
 	@Test
 	public void TestCaseSensitivity() {
 		String myString = "TEST";
-		ArrayList<String> myArray = TokenizerBottomUp.tokenize(myString, 'e');
+		ArrayList<String> myArray = TokenizerTopDown.tokenize(myString, 'e');
 		assertTrue(myArray.size() == 1);
 		assertTrue(myArray.get(0).equals("TEST"));
 	}
 
-	/** Test the connection between tokenize and indexOf */
+	/** Test connection with built in java function */
 	@Test
-	public void TestIndexOfConnection() {
-		int index = TokenizerBottomUp.indexOf(phrase, ',');
-		assertTrue(index == 5);
+	public void TestConnection() {
+		assertTrue(TokenizerTopDown.indexOf(phrase, ',') == phrase.indexOf(','));
 	}
 
 }
