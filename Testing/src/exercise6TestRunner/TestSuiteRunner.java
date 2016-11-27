@@ -1,13 +1,15 @@
-package exercise6;
+package exercise6TestRunner;
 
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
+import exercise6Test.ParameterizedTokenizerTokenizeTestAndParameterizedTokenizerIndexOfTests;
+
 public class TestSuiteRunner {
 	public static void main(String[] args) {
 
-		Result result = JUnitCore.runClasses(TestSuiteParameterizedTests.class);
+		Result result = JUnitCore.runClasses(ParameterizedTokenizerTokenizeTestAndParameterizedTokenizerIndexOfTests.class);
 
 		if (result.getFailures().isEmpty())
 			System.out.println("\nNo failures");

@@ -1,4 +1,4 @@
-package exercise5;
+package exercise6Test;
 
 import static org.junit.Assert.*;
 
@@ -12,10 +12,10 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 
-import exercise4.BottomUp.Tokenizer;
+import exercise6.Tokenizer;
 
 @RunWith(Parameterized.class)
-public class TokenizerIntegrationParameterizedTest {
+public class ParameterizedTokenizerTokenizeTest {
 
 	@Parameter(value = 0)
 	public String phrase;

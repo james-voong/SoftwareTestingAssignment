@@ -1,11 +1,13 @@
-package exercise4.BottomUp;
+package exercise3Test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public class TokenizerIndexOfTest {
+import exercise3.Tokenizer;
+
+public class TokenizerTest {
 
 	String phrase;
 

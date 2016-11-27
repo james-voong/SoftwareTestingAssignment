@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @author Dionysis Athanasopoulos <dionysiscsuoi@gmail.com>
  *
  */
-public class Tokenizer {
+public class TokenizerBottomUp {
 
 	/**
 	 * It splits a string phrase into tokens.

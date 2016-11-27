@@ -1,4 +1,4 @@
-package exercise5;
+package exercise6Test;
 
 import static org.junit.Assert.*;
 
@@ -11,10 +11,10 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 
-import exercise3.Tokenizer;
+import exercise6.Tokenizer;
 
 @RunWith(value = Parameterized.class)
-public class IndexOfParameterizedTest {
+public class ParameterizedTokenizerIndexOfTest {
 
 	@Parameter(value = 0)
 	public String phrase;
@@ -27,12 +27,13 @@ public class IndexOfParameterizedTest {
 
 	@Parameters
 	public static Collection<Object[]> data() {
-		Object[][] data = new Object[][] { { "James", 'm', 2 }, { "MUKESH", 'E', 3 } };
+		Object[][] data = new Object[][] { { "James", 'm', 2 }, { "MUKESH", 'E', 3 }, { "James", 'k', -1 },
+				{ "James", 'J', 0 }, { "James", 's', 4 }, { null, 'k', -1 }, { "", 's', -1 }, { "Jammes", 'm', 2 } };
 		return Arrays.asList(data);
 	}
 
 	@Test
-	public void ParameterizedTestOfIndexOf() {
+	public void ParameterizedTestOfIndexOfValue() {
 		assertTrue(Tokenizer.indexOf(phrase, separator) == result);
 
 	}

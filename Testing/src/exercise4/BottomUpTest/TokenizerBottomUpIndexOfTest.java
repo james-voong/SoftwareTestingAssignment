@@ -1,11 +1,13 @@
-package exercise3;
+package exercise4.BottomUpTest;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public class TokenizerTest {
+import exercise4.BottomUp.TokenizerBottomUp;
+
+public class TokenizerBottomUpIndexOfTest {
 
 	String phrase;
 
@@ -17,13 +19,13 @@ public class TokenizerTest {
 	/** Test to see if function can find a char at index 1 */
 	@Test
 	public void CharFoundAtIndexOtherThanFirstOrLast() {
-		assertTrue(Tokenizer.indexOf(phrase, 'a') == 1);
+		assertTrue(TokenizerBottomUp.indexOf(phrase, 'a') == 1);
 	}
 
 	/** Test where key is not expected to be found */
 	@Test
 	public void KeyNotFound() {
-		assertTrue(Tokenizer.indexOf(phrase, 'o') == -1);
+		assertTrue(TokenizerBottomUp.indexOf(phrase, 'o') == -1);
 	}
 
 	/**
@@ -32,7 +34,7 @@ public class TokenizerTest {
 	 */
 	@Test
 	public void CharFoundAtIndex0() {
-		assertTrue(Tokenizer.indexOf(phrase, 'J') == 0);
+		assertTrue(TokenizerBottomUp.indexOf(phrase, 'J') == 0);
 	}
 
 	/**
@@ -41,19 +43,19 @@ public class TokenizerTest {
 	 */
 	@Test
 	public void CharFoundAtLastIndex() {
-		assertTrue(Tokenizer.indexOf(phrase, 's') == phrase.length() - 1);
+		assertTrue(TokenizerBottomUp.indexOf(phrase, 's') == phrase.length() - 1);
 	}
 
 	/** Test for if phrase==null */
 	@Test
 	public void NullInputGiven() {
-		assertTrue(Tokenizer.indexOf(null, 'J') == -1);
+		assertTrue(TokenizerBottomUp.indexOf(null, 'J') == -1);
 	}
 
 	/** Test for if phrase is an empty string */
 	@Test
 	public void EmptyString() {
-		assertTrue(Tokenizer.indexOf("", 'J') == -1);
+		assertTrue(TokenizerBottomUp.indexOf("", 'J') == -1);
 	}
 
 	/**
@@ -62,13 +64,13 @@ public class TokenizerTest {
 	 */
 	@Test
 	public void MultipleOccurancesOfChar() {
-		assertTrue(Tokenizer.indexOf("Jammes", 'm') == 2);
+		assertTrue(TokenizerBottomUp.indexOf("Jammes", 'm') == 2);
 	}
 
 	/** Test to assure that function is case sensitive */
 	@Test
 	public void CaseSensitive() {
-		assertTrue(Tokenizer.indexOf(phrase, 'j') == -1);
+		assertTrue(TokenizerBottomUp.indexOf(phrase, 'j') == -1);
 	}
 
 }
