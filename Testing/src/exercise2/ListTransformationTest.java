@@ -1,4 +1,4 @@
-package week1.TestingArtifacts;
+package exercise2;
 
 import static org.junit.Assert.*;
 
@@ -10,7 +10,7 @@ import org.junit.Test;
 public class ListTransformationTest {
 
 	@Test
-	public void TransformToLowerCaseMoreThanTwoStrings() {
+	public void TransformToLowerCaseMoreThanOneString() {
 		List<String> myArray = new ArrayList<String>();
 		myArray.add("James");
 		myArray.add("DEBRAH");
@@ -34,6 +34,7 @@ public class ListTransformationTest {
 	public void ListIsEmpty() {
 		List<String> myArray = new ArrayList<String>();
 		myArray = ListTransformation.toLowerCase(myArray);
+		System.out.println("ListIsEmpty ");
 		for (String s : myArray)
 			System.out.println(s);
 		System.out.println();

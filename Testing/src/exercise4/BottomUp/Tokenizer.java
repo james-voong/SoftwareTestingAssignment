@@ -1,4 +1,4 @@
-package week2.TokenizerIntegration;
+package exercise4.BottomUp;
 
 import java.util.ArrayList;
 
@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @author Dionysis Athanasopoulos <dionysiscsuoi@gmail.com>
  *
  */
-public class TokenizerIntegrationBottomUp {
+public class Tokenizer {
 
 	/**
 	 * It splits a string phrase into tokens.
@@ -21,6 +21,7 @@ public class TokenizerIntegrationBottomUp {
 	 */
 	public static ArrayList<String> tokenize(String phrase, char separator) {
 
+		// Added this 'if' statement in to handle null inputs during debugging
 		if (phrase == null)
 			return null;
 
@@ -40,7 +41,9 @@ public class TokenizerIntegrationBottomUp {
 
 				phrase = phrase.substring(position + 1, phrase.length());
 
-			} else if (position == -1) {
+			}
+			// Added this else if statement in to debug
+			else if (position == -1) {
 				terms.add(phrase);
 			}
 
@@ -61,10 +64,16 @@ public class TokenizerIntegrationBottomUp {
 	 */
 	public static int indexOf(String phrase, char key) {
 
+		/** Buggy version */
+		// for (int i = 0; i < phrase.length(); ++i)
+		// if (phrase.charAt(phrase.length() - 1) == key)
+		// return i;
+
 		if (phrase == null)
 			return -1;
 
 		for (int i = 0; i < phrase.length(); ++i)
+			// Changed this from if (phrase.charAt(phrase.length() - 1) == key)
 			if (phrase.charAt(i) == key)
 				return i;
 

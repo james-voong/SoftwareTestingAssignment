@@ -1,4 +1,4 @@
-package week2.Tokenizer;
+package exercise3;
 
 /**
  *
@@ -18,6 +18,11 @@ public class Tokenizer {
 	 * @return index of the key in the string if present; -1 otherwise
 	 */
 	public static int indexOf(String phrase, char key) {
+
+		/** Buggy version */
+		// for (int i = 0; i < phrase.length(); ++i)
+		// if (phrase.charAt(phrase.length() - 1) == key)
+		// return i;
 
 		if (phrase == null)
 			return -1;

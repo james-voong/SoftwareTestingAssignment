@@ -1,4 +1,4 @@
-package week1.TestingTerminology;
+package exercise1;
 
 import java.math.BigDecimal;
 

@@ -1,4 +1,4 @@
-package week2.ParameterizedTest;
+package exercise5;
 
 import static org.junit.Assert.*;
 
@@ -12,7 +12,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 
-import week2.TokenizerIntegration.TokenizerIntegrationBottomUp;
+import exercise4.BottomUp.Tokenizer;
 
 @RunWith(Parameterized.class)
 public class TokenizerIntegrationParameterizedTest {
@@ -44,7 +44,7 @@ public class TokenizerIntegrationParameterizedTest {
 
 	@Test
 	public void ParameterizedTestTokenizerIntegration() {
-		assertTrue(TokenizerIntegrationBottomUp.tokenize(phrase, separator).equals(result));
+		assertTrue(Tokenizer.tokenize(phrase, separator).equals(result));
 	}
 
 }

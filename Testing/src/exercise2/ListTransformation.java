@@ -1,4 +1,4 @@
-package week1.TestingArtifacts;
+package exercise2;
 
 import java.util.ArrayList;
 import java.util.List;

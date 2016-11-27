@@ -1,4 +1,4 @@
-package week2.Tokenizer;
+package exercise3;
 
 import static org.junit.Assert.*;
 
@@ -16,7 +16,7 @@ public class TokenizerTest {
 
 	/** Test to see if function can find a char at index 1 */
 	@Test
-	public void CharFoundAtIndex1() {
+	public void CharFoundAtIndexOtherThanFirstOrLast() {
 		assertTrue(Tokenizer.indexOf(phrase, 'a') == 1);
 	}
 

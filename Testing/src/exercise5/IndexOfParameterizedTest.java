@@ -1,4 +1,4 @@
-package week2.ParameterizedTest;
+package exercise5;
 
 import static org.junit.Assert.*;
 
@@ -11,7 +11,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 
-import week2.Tokenizer.Tokenizer;
+import exercise3.Tokenizer;
 
 @RunWith(value = Parameterized.class)
 public class IndexOfParameterizedTest {

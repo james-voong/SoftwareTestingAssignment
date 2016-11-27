@@ -1,10 +1,8 @@
-package week2.TestSuiteRunner;
+package exercise6;
 
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
-
-import week2.ParameterizedTest.TestSuiteParameterizedTests;
 
 public class TestSuiteRunner {
 	public static void main(String[] args) {
