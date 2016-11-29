@@ -108,7 +108,7 @@ public class TestEuclideanDivision {
 	public void NegativeHigherIntDividedByPositiveLowerIntWithNoRemainder() {
 		int x = -6, y = 2;
 		assertTrue(EuclideanDivision.divide(x, y) == -3);
-		int a = 25000001, b = 50000;
+		int a = 25000000, b = 50000;
 		assertTrue(EuclideanDivision.divide(a, b) == -500);
 	}
 
